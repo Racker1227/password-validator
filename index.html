@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Validator</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          padding: 30px;
+          background: #f4f4f4;
+        }
+        input[type="password"] {
+          padding: 8px;
+          width: 300px;
+          font-size: 16px;
+        }
+        button {
+          padding: 8px 15px;
+          margin-left: 10px;
+        }
+        #result {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+        .valid { color: green; }
+        .invalid { color: red; }
+    </style>
+</head>
+<body>
+
+<h2>Welcome to Password Validator</h2>
+
+<div>
+<h3>Rules</h3>
+    <ol>
+        <li>Password characters should be range 8-15 characters </li>
+        <li>Password must have atleast one number, alphabet (Uppercase and lowercase) and Special character like !@#$%_ </li>
+        <li>Password cannot have consecutive letter and numbers like abc, 123</li>
+        <li>Password cannot have Month Name or Day name like Monday, Mon or Jan or January</li>
+        <li>Password cannot have mobile number (10 numbers consucutive)</li>
+    </ol>
+</div>
+
+<input type="password" id="password" placeholder="Enter password" />
+<button onclick="validatePassword()">Check</button>
+
+<div id="result"></div>
+
+<script>
+    function _0x5521(){const _0x575bc4=['Wrong\x20Password\x20!\x20Password\x20cannot\x20have\x20consecutive\x20letters\x20or\x20numbers\x20like\x20\x27abc\x27\x20or\x20\x27123\x27.','4tlMJLH','432572FqGrWf','Wrong\x20Password\x20!\x20Password\x20must\x20contain\x20uppercase,\x20lowercase,\x20number\x20and\x20special\x20character\x20(!@#$%_).','invalid','12bPBgJg','Wrong\x20Password\x20!\x20Password\x20cannot\x20contain\x2010-digit\x20mobile\x20numbers.','result','test','166780YUXhje','Wrong\x20Password\x20!\x20Password\x20cannot\x20contain\x20month\x20or\x20day\x20names.','893592iifNvO','1035655miTDKU','className','186110rHtPZe','1793KGEsoi','innerHTML','120tDPOjy','864507mxGryI','getElementById','valid','password','11030808fnJsne','Congratulations\x20!\x20Password\x20is\x20valid!'];_0x5521=function(){return _0x575bc4;};return _0x5521();}(function(_0x3bdab8,_0x42775c){const _0x3b7efe=_0x27bd,_0x4fa788=_0x3bdab8();while(!![]){try{const _0x420a55=-parseInt(_0x3b7efe(0x80))/0x1+parseInt(_0x3b7efe(0x8b))/0x2*(parseInt(_0x3b7efe(0x84))/0x3)+parseInt(_0x3b7efe(0x77))/0x4*(parseInt(_0x3b7efe(0x7e))/0x5)+parseInt(_0x3b7efe(0x88))/0x6+-parseInt(_0x3b7efe(0x8c))/0x7*(-parseInt(_0x3b7efe(0x83))/0x8)+-parseInt(_0x3b7efe(0x7d))/0x9+-parseInt(_0x3b7efe(0x7b))/0xa*(parseInt(_0x3b7efe(0x81))/0xb);if(_0x420a55===_0x42775c)break;else _0x4fa788['push'](_0x4fa788['shift']());}catch(_0xc8685d){_0x4fa788['push'](_0x4fa788['shift']());}}}(_0x5521,0xea2fb));function _0x27bd(_0x15530b,_0x173330){const _0x5521be=_0x5521();return _0x27bd=function(_0x27bd86,_0x39ee27){_0x27bd86=_0x27bd86-0x75;let _0xfa119=_0x5521be[_0x27bd86];return _0xfa119;},_0x27bd(_0x15530b,_0x173330);}function validatePassword(){const _0x167b55=_0x27bd,_0x1e61e3=document['getElementById'](_0x167b55(0x87))['value'],_0x517d2b=document[_0x167b55(0x85)](_0x167b55(0x79)),_0x550c85=/^.{8,15}$/,_0x3a3e72=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%_])/,_0x55e055=/(abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|123|234|345|456|567|678|789|890|012)/i,_0x570588=/(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december|mon|monday|tue|tuesday|wed|wednesday|thu|thursday|fri|friday|sat|saturday|sun|sunday)/i,_0x474182=/\d{10}/;if(!_0x550c85['test'](_0x1e61e3))_0x517d2b[_0x167b55(0x82)]='Wrong\x20Password\x20!\x20Password\x20must\x20be\x20between\x208\x20and\x2015\x20characters.',_0x517d2b['className']=_0x167b55(0x76);else{if(!_0x3a3e72['test'](_0x1e61e3))_0x517d2b[_0x167b55(0x82)]=_0x167b55(0x75),_0x517d2b[_0x167b55(0x7f)]=_0x167b55(0x76);else{if(_0x55e055[_0x167b55(0x7a)](_0x1e61e3))_0x517d2b[_0x167b55(0x82)]=_0x167b55(0x8a),_0x517d2b['className']=_0x167b55(0x76);else{if(_0x570588[_0x167b55(0x7a)](_0x1e61e3))_0x517d2b[_0x167b55(0x82)]=_0x167b55(0x7c),_0x517d2b[_0x167b55(0x7f)]='invalid';else _0x474182[_0x167b55(0x7a)](_0x1e61e3)?(_0x517d2b[_0x167b55(0x82)]=_0x167b55(0x78),_0x517d2b[_0x167b55(0x7f)]=_0x167b55(0x76)):(_0x517d2b[_0x167b55(0x82)]=_0x167b55(0x89),_0x517d2b[_0x167b55(0x7f)]=_0x167b55(0x86));}}}}
+</script>
+
+</body>
+</html>
