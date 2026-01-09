@@ -1,0 +1,22 @@
+{
+  "name": "password-validator-perosnal",
+  "version": "1.0.0",
+  "description": "```markdown\r # 🔐 Password Validator - HTML App",
+  "homepage": "https://github.com/Racker1227/password-validator#readme",
+  "bugs": {
+    "url": "https://github.com/Racker1227/password-validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Racker1227/password-validator.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3"
+  }
+}
