@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test("test1 - Get all visinle text from page", async ({page}) => {
+test("test1 - Get all visible text from page", async ({page}) => {
 
     //link
     await page.goto("http://localhost:6888/");

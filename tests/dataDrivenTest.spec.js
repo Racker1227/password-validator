@@ -1,16 +1,21 @@
 import {test, expect} from '@playwright/test';
+import passwordData from '../test-data/passwordData.json';
 
-test("Final Test - valid or invalid password", async ({page}) => {
+test.describe("DataDrivenTest for Password Validator", () => {
 
-    //link 
-    await page.goto("http://localhost:6888/");
-    //locate enter password field
-    await page.locator("//input[@id='password']").fill("rus3");
-    //locate check button
-    await page.locator("//button[text()='Check']").click();
-    
-    
-    // locate Wrong password message and locate Wrong password message for any message (success or failure)
+for (const pass of passwordData){
+
+    test("Check password " +pass.password, async ({page}) => {
+
+        //link 
+        await page.goto("http://localhost:6888/");
+        //locate enter password field
+        await page.locator("//input[@id='password']").fill(pass.password);     
+
+        //locate check button
+        await page.locator("//button[text()='Check']").click();
+
+        // Unified locator for any message (success or failure)
         const messageLocator = page.locator("//div[contains(text(),'Password') or contains(text(),'Congratulations')]");
         const messageText = await messageLocator.textContent();
 
@@ -28,8 +33,7 @@ test("Final Test - valid or invalid password", async ({page}) => {
         // Extra validation: ensure visibility and exact text
         await expect(messageLocator).toBeVisible();
         await expect(messageLocator).toHaveText(messageText);
-   
+    });
+}
 
 });
-
-

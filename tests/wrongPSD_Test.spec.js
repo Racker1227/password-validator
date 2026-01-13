@@ -130,11 +130,16 @@ test("test5 - check ALPHABETS with 1ST letter is UPPERCASE password is invalid",
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must be between 8 and 15 characters.");
         }
-    else
+    else if(messageText === "Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).")
     {
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).");
         
+    }
+    else(messageText === "Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.")
+    {
+        await expect (wrongPSDMessage).toBeVisible();
+        await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.");
     }
 
 });
@@ -157,11 +162,16 @@ test("test6 - check ALPHABETS with 1ST letter is LOWERCASE password is invalid",
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must be between 8 and 15 characters.");
         }
-    else
+    else if(messageText === "Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).")
     {
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).");
         
+    }
+    else(messageText === "Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.")
+    {
+        await expect (wrongPSDMessage).toBeVisible();
+        await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.");
     }
 
 });
@@ -179,16 +189,21 @@ test("test7 - check SPECIAL characters password is invalid", async ({page}) => {
     const wrongPSDMessage = page.locator("//div[starts-with(text(),'Wrong Password')]");
     
     const messageText = await wrongPSDMessage.textContent();
-    if(messageText === "Wrong Password ! Password must be between 8 and 15 characters.") 
+   if(messageText === "Wrong Password ! Password must be between 8 and 15 characters.") 
         {
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must be between 8 and 15 characters.");
         }
-    else
+    else if(messageText === "Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).")
     {
         await expect (wrongPSDMessage).toBeVisible();
         await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password must contain uppercase, lowercase, number and special character (!@#$%_).");
         
+    }
+    else(messageText === "Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.")
+    {
+        await expect (wrongPSDMessage).toBeVisible();
+        await expect (wrongPSDMessage).toHaveText("Wrong Password ! Password cannot have consecutive letters or numbers like 'abc' or '123'.");
     }
 });
 
