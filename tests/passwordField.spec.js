@@ -22,7 +22,7 @@ test("test2 - Type in ENTER PASSWORD field", async ({page}) => {
 
 });
 
-test.only("test3 - Check PASSWORD filed type is password", async ({page}) => {
+test("test3 - Check PASSWORD filed type is password", async ({page}) => {
 
     //link
     await page.goto("http://localhost:6888/");
